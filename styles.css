@@ -1,0 +1,88 @@
+/* Variables — local build */
+
+/* a value standing in for {{name}} */
+.lv-var {
+	padding: 0 2px;
+	border-radius: var(--radius-s);
+	background-color: var(--background-modifier-hover);
+	box-shadow: inset 0 -1px 0 var(--text-accent);
+	cursor: default;
+}
+
+.lv-var.lv-in-code {
+	padding: 0;
+	background-color: transparent;
+	box-shadow: none;
+	color: var(--text-accent);
+	text-decoration: underline dotted;
+	text-decoration-color: color-mix(in srgb, var(--text-accent) 60%, transparent);
+	text-underline-offset: 3px;
+}
+
+/* Live Preview draws a value as a widget between the two halves of `inline code`; give it the same chip */
+.markdown-source-view .lv-var.lv-in-inline-code {
+	padding: 0.1em 0;
+	font-family: var(--font-monospace);
+	font-size: var(--code-size);
+	background-color: var(--code-background);
+	border-radius: 0;
+}
+
+.lv-var.lv-kind-ip:not(.lv-in-code) {
+	font-family: var(--font-monospace);
+	font-size: 0.92em;
+}
+
+.lv-var .internal-link,
+.lv-var .external-link {
+	cursor: var(--cursor-link);
+}
+
+.lv-embed img {
+	vertical-align: middle;
+	max-height: 4em;
+}
+
+/* secrets: blurred until hovered; the text underneath is real, so copying still works */
+.lv-var.is-secret {
+	filter: blur(4px);
+	transition: filter 120ms ease;
+}
+
+.lv-var.is-secret:hover {
+	filter: none;
+}
+
+/* picker rows */
+.lv-row-top {
+	display: flex;
+	align-items: baseline;
+	gap: 12px;
+}
+
+.lv-row-name {
+	font-family: var(--font-monospace);
+	font-size: 0.92em;
+	color: var(--text-normal);
+	white-space: nowrap;
+}
+
+.lv-row-value {
+	margin-inline-start: auto;
+	color: var(--text-accent);
+	font-family: var(--font-monospace);
+	font-size: 0.88em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.lv-row-meta {
+	font-size: var(--font-ui-smaller);
+	color: var(--text-muted);
+}
+
+.lv-prompt-input {
+	width: 100%;
+	margin-bottom: 8px;
+}

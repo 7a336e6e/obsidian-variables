@@ -1,0 +1,10 @@
+{
+	"id": "local-variables",
+	"name": "Variables",
+	"version": "1.0.0",
+	"minAppVersion": "1.6.0",
+	"description": "Use any property as a variable: {{IP}}, {{user}}, {{dc.IP}}. Values can be text, IPs, URLs, secrets or links to notes, headings and blocks. Copy buttons copy the filled-in commands. Local build: plain JavaScript, no dependencies, no network access.",
+	"author": "Local build (not from the community store)",
+	"authorUrl": "",
+	"isDesktopOnly": false
+}

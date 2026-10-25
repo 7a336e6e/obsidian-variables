@@ -1,0 +1,12 @@
+# Settings and state written by Obsidian when the plugin runs (per vault, not part of the plugin)
+data.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / editor
+.idea/
+*.swp
+*.swo
+*~
